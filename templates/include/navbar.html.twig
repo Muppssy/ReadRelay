@@ -1,0 +1,91 @@
+{% if app.user %}
+
+	<nav class=" relative bg-gray-900 h-[12vh]">
+		<div class="h-full max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+
+ <div class="absolute bg-slate-300  h-[22vh]">
+        <div class="absolute -bottom-2 -left-72 ml-16">
+          <img class="w-[120px] h-[120px] object-cover rounded-full border-4 border-gray-200" src="{{app.user.img}}" alt=""/>
+          <div class="absolute bottom-0 right-3 outline outline-gray-200 bg-sky-600 w-[32px] h-[32px] leading-5 text-center rounded-full">
+            <input
+              class="absolute -left-80 bg-red-500 opacity-0 scale-150  cursor-pointer"
+              type="file"/>
+            <i class="text-white mt-2 fa-solid fa-image"></i>
+          </div>
+        </div>
+
+      </div>
+		<a href="https://flowbite.com/" class="flex items-center">
+
+				<span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+			</a>
+
+			<div class="flex md:order-2">
+				<button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center ml-8 md:mr-0">
+					<a href="{{path('app_logout')}} ">
+						Se déconnecter</a>
+				</button>
+
+				<button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-sticky" aria-expanded="false">
+					<span class="sr-only">Open main menu</span>
+					<svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 17 14">
+						<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+					</svg>
+				</button>
+			</div>
+		</div>
+	</nav>
+
+{% else %}
+	<nav class=" bg-gray-900 w-full ">
+		<div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+			<a href="https://flowbite.com/" class="flex items-center">
+				<img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo">
+				<span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+			</a>
+			<div class="flex md:order-2">
+				{% if app.user %}
+
+					<button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center ml-8 md:mr-0">
+						<a href="{{path('app_logout')}} ">
+							Se déconnecter</a>
+					</button>
+					{# <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center ml-8 md:mr-0">
+														<a href="{{path('app_register')}} ">
+															S'enregistrer</a>
+													</button> #}
+				{% else %}
+
+					<button type="button" class=" text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0">
+						<a href="{{path('app_login')}}">
+							Se connecter</a>
+					</button>
+
+
+				{% endif %}
+
+				<button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-sticky" aria-expanded="false">
+					<span class="sr-only">Open main menu</span>
+					<svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 17 14">
+						<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+					</svg>
+				</button>
+			</div>
+			<div class="bg-gray-900 items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+				<ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border  border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0">
+					<li>
+						<a href="{{path('app_main')}}" class="text-white block py-2 pl-3 pr-4 bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0" aria-current="page">Accueil</a>
+					</li>
+
+					<li>
+						<a href="{{path('app_book')}}" class="text-white block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500">Nos Livres</a>
+					</li>
+					<li>
+						<a href="#" class="text-white block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500">Contact</a>
+					</li>
+				</li</ul>
+			</div>
+		</div>
+	</nav>
+
+{% endif %}

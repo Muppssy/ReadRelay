@@ -1,0 +1,195 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion{% endblock %}
+
+{% block body %}
+
+    <main class=" container mx-auto relative h-[100vh]  mb-56 py-0">
+      <!-- Sidebar left -->
+      <aside class="abolute left-0 right-0 w-[350px] h-auto">
+        <div class="m-7">
+          <h2 class="font-medium text-xl uppercase mb-8 pt-3 pb-2 border-b-2 border-gray-950 ">
+            Rechercher un Livre
+          </h2>
+          <form class="form-group" >
+            <div class="sm:flex rounded-lg shadow-sm">
+              <input
+                type="text"
+                placeholder="Rechercher..."
+                class="py-3 px-4 pe-11 block w-full border-gray-200 shadow-sm -mt-px -ms-px sm:mt-0 sm:first:ms-0 text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+              />
+              <span
+                class="py-3 px-4 inline-flex items-center min-w-fit bg-gray-300 text-sm text-gray-500 -mt-px -ms-px sm:w-auto sm:mt-0 sm:first:ms-0"
+                ><i class="fa-solid fa-magnifying-glass"></i
+              ></span>
+            </div>
+          </form>
+
+          <div class="mt-10">
+            <h2 class="font-medium text-xl uppercase  pb-2 border-b-2 border-gray-950 mt-10">Nos genre</h2>
+            <div class="mt-6">
+              <ul>
+                <li class="flex justify-between border-b-2 border-gray-950 pb-2 pt-2">
+                    <a href="#">Aventure</a>
+                    <p>(9)</p>
+                </li>
+                <li class="flex justify-between border-b-2 border-gray-950 pb-2 pt-2"><a href="#">BestSeller</a>
+                    <p>(12)</p>
+                </li>
+
+             <li class="flex justify-between border-b-2 border-gray-950 pb-2 pt-2"><a href="#">BestSeller</a>
+                    <p>(12)</p>
+                </li>
+
+                <li class="flex justify-between border-b-2 border-gray-950 pb-2 pt-2"><a href="#">Enfant</a>
+                    <p>(5)</p>
+                </li>
+
+                <li class="flex justify-between border-b-2 border-gray-950 pb-2 pt-2"><a href="#">Cuisine</a>
+                    <p>(21)</p>
+                </li>
+
+                <li class="flex justify-between border-b-2 border-gray-950 pb-2 pt-2"><a href="#">Romance</a>
+                    <p>(19)</p>
+                </li>
+
+                <li class="flex justify-between border-b-2 border-gray-950 pb-2 pt-2"><a href="#">Fiction</a>
+                    <p>(4)</p>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-10">
+            <h2 class="font-medium text-xl uppercase  pb-2 border-b-2 border-gray-950 mt-10">Top Livre</h2>
+            <div class="mt-6">
+              <article class=" w-[270px] h-[120px] flex mb-6">
+                <div>
+                    <img class=" w-[90px] h-[120px] object-cover" src="img/Asian.jpg" alt="">
+                </div>
+                <div class="ml-4 flex flex-col">
+                    <h3 class="mb-3 font-semibold">Harry Potter</h3>
+                    <div class="mb-3">
+
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-regular fa-star-half-stroke"></i></span>
+                    </div>
+                    <button class="bg-sky-500 py-1 text-white rounded-lg"> <a href="#"> Voir</a></button>
+                </div>
+              </article>
+              <article class=" w-[270px] h-[120px] flex mb-6">
+                <div>
+                    <img class=" w-[90px] h-[120px] object-cover" src="img/2150692982.jpg" alt="">
+                </div>
+                <div class="ml-4 flex flex-col">
+                    <h3 class="mb-3 font-semibold">Harry Potter</h3>
+                    <div class="mb-3">
+
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-regular fa-star-half-stroke"></i></span>
+                    </div>
+                    <button class="bg-sky-500 py-1 text-white rounded-lg"> <a href="#"> Voir</a></button>
+                </div>
+              </article>
+
+              <article class=" w-[270px] h-[120px] flex mb-6">
+                <div>
+                    <img class=" w-[90px] h-[120px] object-cover" src="img/outdoors-7213961_1280.jpg" alt="">
+                </div>
+                <div class="ml-4 flex flex-col">
+                    <h3 class="mb-3 font-semibold">Harry Potter</h3>
+                    <div class="mb-3">
+
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-regular fa-star-half-stroke"></i></span>
+                    </div>
+                    <button class="bg-sky-500 py-1 text-white rounded-lg"> <a href="#"> Voir</a></button>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- top bar content -->
+      <div class=" flex items-center justify-between absolute top-0 right-0 w-[calc(100%-350px)] h-[65.5px] text-white bg-gray-900 py-10">
+        <div class="ml-4 space-x-3">
+          <button class="bg-[#374151] text py-2 px-3">
+            <i class="fa-solid fa-table-cells"></i>
+          </button>
+          <button class="bg-[#374151] text py-2 px-3">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+            
+        </div>
+          <div class="mr-10 space-x-8 flex items-center">
+              <form class="form-group" >
+                <div class="sm:flex rounded-lg shadow-sm">
+                  
+                  <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <option selected>Rechercher par:</option>
+                    <option value="Auteur">Auteur</option>
+                    <option value="Editeur">Editeur</option>
+                    <option value="FR">France</option>
+                    <option value="DE">Germany</option>
+                  </select>
+                </div>
+              </form>
+    
+             
+          </div>
+    </div>
+
+<section id="content_book"class="absolute bottom-0 right-0 w-[calc(100%-350px)] h-[calc(100vh-80px)]  py-10">
+        <div class="container flex justify-center gap-x-5 flex-wrap">
+
+        {% for book in books %}
+          <article class="h-auto flex flex-wrap justify-center items-center gap-x-10 pb-10 text-gray-800">
+              <div class="w-[281px] h-[370px] bg-transparent group perspective">
+                <div class=" shadow-box relative shadow-lg preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
+                  <div class="absolute backface-hidden border-2 w-full h-full">
+                    <img src="{{book.imgurl}}" alt="" class="w-full h-full">
+                  </div>
+        
+                  <div class="card-front absolute px-2 pb-24 my-rotate-y-180 backface-hidden w-full h-full">
+                    <div class="text-center flex flex-col items-center justify-center h-full">
+                      <h1 class="text-2xl text-light-blue font-semibold">{{book.titre}}</h1>
+                      <p class="mb-5"></p>
+                      <p>{{book.description}}</p>
+                    </div>
+        
+                    <div class="flex w items-center mt-2">
+                      <img class='w-10 h-10 object-cover rounded-full' alt='User avatar' src='{{book.imgauthor}}'>
+        
+                      <div class="pl-3">
+
+                        <div class="font-medium">
+                        {{book.auteur}}
+                        </div>
+
+                        <div class="text-sm">
+                          {{book.editeur}}
+                        </div>
+        
+                      </div>
+                      <a href="#" class="max-w-48 mx-auto bg-sky-500 px-6 py-2 font-semibold rounded-lg text-white cursor-pointer">Voir +</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </article>
+{% endfor %}
+      </div>
+</section>
+    </main>
+	
+{% endblock %}

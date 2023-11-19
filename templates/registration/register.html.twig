@@ -1,0 +1,27 @@
+{# {% extends 'base.html.twig' %}
+
+{% block title %}Register
+{% endblock %}
+
+{% block body %}
+
+	<div class="my-60 mx-60">
+		<h1>Register</h1>
+
+		{{ form_errors(registrationForm) }}
+
+		{{ form_start(registrationForm) }}
+		{{ form_row(registrationForm.nom) }}
+		{{ form_row(registrationForm.prenom) }}
+		{{ form_row(registrationForm.email) }}
+		{{ form_row(registrationForm.plainPassword, {
+            label: 'Password'
+        }) }}
+		{{ form_row(registrationForm.RGPDConsent) }}
+
+		<button type="submit" class="inline-block rounded border-2 border-primary px-6 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-primary transition duration-150 ease-in-out hover:bg-primary hover:text-white hover:border-primary  focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0" data-te-ripple-init>
+			Register
+		</button>
+		{{ form_end(registrationForm) }}
+	</div>
+{% endblock %} #}
